@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "main": "dist/j.js",
   "license": "MIT",
+  "repository": "github:jake8n/vue-jsx-factory",
   "scripts": {
     "start": "snowpack dev",
     "test": "ava",
