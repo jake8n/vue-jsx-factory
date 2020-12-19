@@ -1,0 +1,13 @@
+{
+  "buildOptions": {
+    "clean": true,
+    "jsxFactory": "j"
+  },
+  "devOptions": {
+    "open": "none"
+  },
+  "mount": {
+    "public": "/",
+    "src": "/src"
+  }
+}
