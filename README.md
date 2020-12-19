@@ -1,6 +1,8 @@
 # Vue JSX Factory
 
-Forget about Babel. Instead compile Vue JSX and TSX with tsc/esbuild.
+![NPM](https://img.shields.io/npm/v/vue-jsx-factory/latest.svg)
+
+Compile Vue JSX and TSX with `tsc` or `esbuild`.
 
 ## tsconfig.json
 
@@ -15,13 +17,13 @@ Forget about Babel. Instead compile Vue JSX and TSX with tsc/esbuild.
 
 ## Example
 
-```tsx
-// j must be in scope, even though it looks like it is undefined
+```jsx
+// j must be in scope, even though it looks unused
 import { j } from "vue-jsx-factory";
-import VueCompositionApi, { defineComponent } from "@vue/composition-api";
-import Vue, { CreateElement } from "vue";
+import CompositionApi, { defineComponent } from "@vue/composition-api";
+import Vue from "vue";
 
-Vue.use(VueCompositionApi);
+Vue.use(CompositionApi);
 
 const App = defineComponent({
   data() {
@@ -39,13 +41,11 @@ const App = defineComponent({
   },
 });
 
-new Vue({ render: (h: CreateElement) => h(App) }).$mount("#app");
+new Vue({ render: (h) => h(App) }).$mount("#app");
 ```
 
-## Playground
-
-Example components in `/src/components/` are served on `yarn start`.
+`yarn start` will create a development server, with even more examples from `/src/components`.
 
 ## To do
 
-- HMR
+- Hot module reloading

@@ -5,6 +5,15 @@
   "main": "dist/j.js",
   "license": "MIT",
   "repository": "github:jake8n/vue-jsx-factory",
+  "keywords": [
+    "vue",
+    "typescript",
+    "jsx",
+    "jsxfactory",
+    "tsx",
+    "tsc",
+    "esbuild"
+  ],
   "scripts": {
     "start": "snowpack dev",
     "test": "ava",
