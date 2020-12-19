@@ -1,5 +1,6 @@
 public
-src
+src/*
+!src/j.js
 snowpack.config.json
 tsconfig.json
 yarn.lock

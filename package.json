@@ -2,7 +2,7 @@
   "name": "vue-jsx-factory",
   "type": "module",
   "version": "0.1.0",
-  "main": "dist/j.js",
+  "main": "src/j.js",
   "license": "MIT",
   "repository": "github:jake8n/vue-jsx-factory",
   "keywords": [
@@ -15,10 +15,10 @@
     "esbuild"
   ],
   "scripts": {
+    "prepublishOnly": "tsc",
     "start": "snowpack dev",
     "test": "ava",
-    "test-runner": "tsc && ava",
-    "tsc": "tsc"
+    "test-runner": "tsc && ava"
   },
   "husky": {
     "hooks": {

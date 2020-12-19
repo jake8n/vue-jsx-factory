@@ -5,10 +5,9 @@
     "lib": ["DOM", "ESNext"],
     "module": "ESNext",
     "moduleResolution": "node",
-    "outDir": "dist",
     "strict": true,
     "target": "es5"
   },
-  "include": ["src/**/j.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["node_modules"]
 }
