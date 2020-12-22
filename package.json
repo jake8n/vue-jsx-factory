@@ -15,7 +15,7 @@
     "esbuild"
   ],
   "scripts": {
-    "prepublishOnly": "tsc",
+    "prepublishOnly": "tsc && ava",
     "start": "snowpack dev",
     "test": "ava",
     "test-runner": "tsc && ava"

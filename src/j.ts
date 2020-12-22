@@ -1,8 +1,9 @@
 import { h } from "@vue/composition-api";
 import Vue, { VNodeChildren, VueConstructor } from "vue";
 
-const V_SLOT = "v-slot";
 const CLASS_NAME = "class";
+const REF = "ref";
+const V_SLOT = "v-slot";
 
 type Element = string | VueConstructor<Vue>;
 export type Options = { [option: string]: any };
@@ -38,10 +39,16 @@ export const getJArgumentsWithOptions = (
   ...children: VNodeChildren[]
 ): [Element, Options, ...VNodeChildren[]] => {
   const eventNames = getEventNames(options);
-  const props = getAttributes(options, [CLASS_NAME, V_SLOT, ...eventNames]);
+  const props = getAttributes(options, [
+    CLASS_NAME,
+    REF,
+    V_SLOT,
+    ...eventNames,
+  ]);
   const elementIsAComponent = isElementAComponent(element);
   const data = {
     class: getAttributeByName(options, CLASS_NAME),
+    ref: getAttributeByName(options, REF),
     slot: getAttributeByName(options, V_SLOT),
     on: mapEventNamesToHandlerPairs(options, eventNames),
     [elementIsAComponent ? "props" : "attrs"]: props,

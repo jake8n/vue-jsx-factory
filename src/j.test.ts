@@ -13,6 +13,7 @@ import {
 const options: Options = {
   class: "p-4",
   onClick: () => alert("hello"),
+  ref: "div",
   title: "hello world",
   "v-slot": "header",
 };
@@ -34,7 +35,7 @@ test("map event names to handler pairs", (t) => {
 });
 
 test("get attributes minus reserved names", (t) => {
-  t.deepEqual(getAttributes(options, ["class", "onClick", "v-slot"]), {
+  t.deepEqual(getAttributes(options, ["class", "ref", "onClick", "v-slot"]), {
     title: "hello world",
   });
 });
@@ -50,6 +51,7 @@ test("construct options with props for component JSX arguments", (t) => {
     component,
     {
       class: "p-4",
+      ref: "div",
       slot: "header",
       on: {
         click: options.onClick,
@@ -67,6 +69,7 @@ test("construct options with attributes for non-component JSX arguments", (t) =>
     "div",
     {
       class: "p-4",
+      ref: "div",
       slot: "header",
       on: {
         click: options.onClick,
