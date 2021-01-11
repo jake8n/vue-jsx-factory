@@ -1,6 +1,6 @@
 # Vue JSX Factory
 
-![NPM](https://img.shields.io/npm/v/vue-jsx-factory/latest.svg)
+[![npm][npm-img]][npm-url]
 
 Compile Vue JSX and TSX with `tsc` or `esbuild`.
 
@@ -46,6 +46,5 @@ new Vue({ render: (h) => h(App) }).$mount("#app");
 
 `yarn start` will create a development server, with even more examples from `/src/components`.
 
-## To do
-
-- Hot module reloading
+[npm-img]: https://img.shields.io/npm/v/vue-jsx-factory/latest.svg
+[npm-url]: https://www.npmjs.com/package/vue-jsx-factory
